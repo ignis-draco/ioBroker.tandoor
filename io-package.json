@@ -1,0 +1,95 @@
+{
+	"common": {
+		"name": "tandoor",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Tandoor",
+		"titleLang": {
+			"en": "Tandoor",
+			"de": "Tandoor",
+			"ru": "Tandoor",
+			"pt": "Tandoor",
+			"nl": "Tandoor",
+			"fr": "Tandoor",
+			"it": "Tandoor",
+			"es": "Tandoor",
+			"pl": "Tandoor",
+			"zh-cn": "Tandoor"
+		},
+		"desc": {
+			"en": "Read information from Tandoor.",
+			"de": "Read information from Tandoor.",
+			"ru": "Read information from Tandoor.",
+			"pt": "Read information from Tandoor.",
+			"nl": "Read information from Tandoor.",
+			"fr": "Read information from Tandoor.",
+			"it": "Read information from Tandoor.",
+			"es": "Read information from Tandoor.",
+			"pl": "Read information from Tandoor.",
+			"zh-cn": "Read information from Tandoor."
+		},
+		"authors": ["ignis-draco <arne_code@hueff.de>"],
+		"keywords": ["Tandoor", "eating"],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "build/main.js",
+		"icon": "tandoor.svg",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/ignis-draco/ioBroker.tandoor/main/admin/tandoor.svg",
+		"readme": "https://github.com/ignis-draco/ioBroker.tandoor/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "health",
+		"compact": true,
+		"connectionType": "cloud",
+		"dataSource": "poll",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			}
+		]
+	},
+	"native": {
+		"host": "",
+		"port": "443",
+		"token": ""
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
